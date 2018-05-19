@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PyCompiler</string>
+    <string name="str_btn_run">Run</string>
+    <string name="str_txt_output">Output</string>
+    <string name="err_network">Network Exception</string>
+
 </resources>
