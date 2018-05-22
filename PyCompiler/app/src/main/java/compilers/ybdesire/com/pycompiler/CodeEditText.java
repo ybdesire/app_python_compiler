@@ -33,20 +33,9 @@ public class CodeEditText extends AppCompatEditText {
             Pattern.MULTILINE);
     private static final Pattern PATTERN_KEYWORDS = Pattern.compile(
             "\\b(" +
-                    "and|or|xor|for|do|while|foreach|as|return|die|exit|if|then|else|" +
-                    "elseif|new|delete|try|throw|catch|finally|class|function|string|" +
-                    "array|object|resource|var|bool|boolean|int|integer|float|double|" +
-                    "real|string|array|global|const|static|public|private|protected|" +
-                    "published|extends|switch|true|false|null|void|this|self|struct|" +
-                    "char|signed|unsigned|short|long|True|False|a|address|app|applet|" +
-                    "area|b|base|basefont|bgsound|big|blink|blockquote|body|br|button|" +
-                    "caption|center|cite|code|col|colgroup|comment|dd|del|dfn|dir|div|" +
-                    "dl|dt|em|embed|fieldset|font|form|frame|frameset|h1|h2|h3|h4|h5|h6|" +
-                    "head|hr|html|htmlplus|hype|i|iframe|img|input|ins|del|isindex|kbd|" +
-                    "label|legend|li|link|listing|map|marquee|menu|meta|multicol|nobr|" +
-                    "noembed|noframes|noscript|ol|option|p|param|plaintext|pre|s|samp|" +
-                    "script|select|small|sound|spacer|span|strike|strong|style|sub|sup|" +
-                    "table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u|var|wbr|xmp" +
+                    "and|del|from|not|while|as|elif|global|or|with|assert|else|if|pass|yield|break|" +
+                    "except|import|print|class|exec|in|raise|continue|finally|is|return|def|for|lambda|try" +
+
                     ")\\b");
     private static final Pattern PATTERN_BUILTINS = Pattern.compile(
             "\\b(radians|degrees|sin|cos|tan|asin|acos|atan|pow|" +
