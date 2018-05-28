@@ -29,7 +29,13 @@ import org.apache.http.util.EntityUtils;
 import android.util.Base64;
 import org.json.JSONObject;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity {
+    private AdView mAdView;
+
     private void setText(final TextView text,final String value){
         runOnUiThread(new Runnable() {
             @Override
@@ -43,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Admob
+        MobileAds.initialize(this, "ca-app-pub-8100413825150401~5715492852");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         //Edit Text
@@ -58,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         btn=findViewById(R.id.button_println);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                editText.getText().insert(editText.getSelectionStart(), "System.out.println(  )");
+                editText.getText().insert(editText.getSelectionStart(), "print(  )");
             }
         });
         btn=findViewById(R.id.button_quote);
